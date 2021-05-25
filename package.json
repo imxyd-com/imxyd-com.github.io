@@ -1,0 +1,118 @@
+{
+  "name": "gridea",
+  "version": "0.8.1",
+  "private": true,
+  "description": "A static blog writing client. You can use it to record your life, mood, knowledge, notes and ideas...",
+  "keywords": [
+    "gridea",
+    "static-site",
+    "static-site-generator"
+  ],
+  "homepage": "http://gridea.dev",
+  "license": "MIT",
+  "author": {
+    "name": "EryouHao",
+    "email": "eryouhao@gmail.com"
+  },
+  "repository": "https://github.com/getgridea/gridea",
+  "scripts": {
+    "electron:build": "vue-cli-service electron:build",
+    "electron:serve": "vue-cli-service electron:serve",
+    "postinstall": "electron-builder install-app-deps",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@iktakahiro/markdown-it-katex": "^3.1.0",
+    "ant-design-vue": "^1.3.5",
+    "axios": "^0.18.0",
+    "bluebird": "^3.5.3",
+    "ejs": "^2.6.1",
+    "feed": "^2.0.4",
+    "fs-extra": "^7.0.1",
+    "gray-matter": "^4.0.1",
+    "junk": "^2.1.0",
+    "less": "^3.9.0",
+    "lowdb": "^1.0.0",
+    "markdown-it": "^8.4.2",
+    "markdown-it-toc-and-anchor": "^4.2.0",
+    "moment": "^2.24.0",
+    "shortid": "^2.2.14",
+    "simple-git": "^1.107.0",
+    "slug": "^0.9.3",
+    "transliteration": "^1.6.6",
+    "vue": "^2.5.17",
+    "vue-class-component": "^6.0.0",
+    "vue-i18n": "^8.7.0",
+    "vue-property-decorator": "^7.3.0",
+    "vue-router": "^3.0.1",
+    "vue-simplemde": "^0.5.1",
+    "vue2-transitions": "^0.2.3",
+    "vuex": "^3.0.1",
+    "vuex-class": "^0.3.1",
+    "@hfelix/electron-localshortcut": "^3.1.1",
+    "dompurify": "^1.0.10",
+    "element-resize-detector": "^1.2.0",
+    "file-icons-js": "^1.0.3",
+    "flowchart.js": "^1.11.3",
+    "fuzzaldrin": "^2.1.0",
+    "github-markdown-css": "^3.0.1",
+    "html-tags": "^3.0.0",
+    "katex": "^0.10.2",
+    "mermaid": "^8.0.0",
+    "popper.js": "^1.15.0",
+    "prismjs": "^1.16.0",
+    "snabbdom": "^0.7.3",
+    "snabbdom-to-html": "^5.1.1",
+    "snapsvg": "^0.5.1",
+    "turndown": "^5.0.3",
+    "turndown-plugin-gfm": "^1.0.2",
+    "underscore": "^1.9.1",
+    "vega": "^5.4.0",
+    "vega-embed": "^4.0.0",
+    "vega-lite": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.26",
+    "@types/ejs": "^2.6.3",
+    "@types/fs-extra": "^5.0.5",
+    "@types/less": "^3.0.0",
+    "@types/lowdb": "^1.0.7",
+    "@types/markdown-it": "0.0.7",
+    "@types/marked": "^0.6.5",
+    "@types/shortid": "0.0.29",
+    "@types/slug": "^0.9.1",
+    "@vue/cli-plugin-babel": "^3.6.0",
+    "@vue/cli-plugin-eslint": "^3.6.0",
+    "@vue/cli-plugin-typescript": "^3.6.0",
+    "@vue/cli-service": "^3.6.0",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "@vue/eslint-config-typescript": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "electron": "^4.0.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "husky": "^1.3.1",
+    "less-loader": "^4.1.0",
+    "lint-staged": "^8.1.5",
+    "markdown-it-task-lists": "^2.1.1",
+    "typescript": "^3.0.0",
+    "vue-cli-plugin-electron-builder": "^1.2.0",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "main": "background.js",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
+  "__npminstall_done": false
+}
