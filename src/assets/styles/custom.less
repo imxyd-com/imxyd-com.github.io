@@ -1,0 +1,116 @@
+@primary-color : #434343;
+@primary-bg: #F7F6F3;
+
+@border-radius-base : 2px;
+@link-color: #1067de;
+
+.ant-table-wrapper {
+  background: #F7F6F3;
+}
+.ant-table {
+  background: #fff;
+  color: #434343;
+  box-shadow: inset 0px -1px 1px #ada89c82;
+}
+.ant-table-tbody {
+  .ant-table-row:nth-of-type(2n) {
+    background: #f7f6f39e;
+  }
+}
+.ant-table-tbody > tr > td {
+  border-bottom: 0;
+}
+
+.ant-table-thead > tr > th {
+  background: #eae8e1;
+  color: #6b6961;
+}
+
+.ant-table-thead > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td, .ant-table-tbody > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td, .ant-table-thead > tr:hover:not(.ant-table-expanded-row) > td, .ant-table-tbody > tr:hover:not(.ant-table-expanded-row) > td {
+  background: transparent;
+}
+
+.ant-table-tbody > tr.ant-table-row-selected td {
+  background: transparent;
+}
+
+.tool-container {
+  padding: 8px 0 16px;
+  margin-bottom: 16px;
+  position: fixed;
+  top: 8px;
+  left: 216px;
+  right: 16px;
+  z-index: 1;
+  background: #F7F6F3;
+  border-bottom: 1px solid #e2e2e2;
+  .btn {
+    margin-left: 16px;
+  }
+}
+.content-container {
+  margin-top: 64px;
+}
+
+.table-cell-link {
+  font-weight: bold;
+}
+
+.ant-input {
+  border-width: 1px;
+}
+
+.ant-select-dropdown-menu-item-active, .ant-select-dropdown-menu-item:hover {
+  background: #f7f7f7;
+}
+
+.ant-btn-primary {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.ant-pagination-item-active {
+  background: #f9f7f3;
+}
+.ant-pagination-item {
+  background: #f9f7f3;
+  border-radius: 50%;
+}
+
+.ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 4px;
+    background: #fcc514;
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+  }
+}
+
+.ant-checkbox-inner:after {
+  left: 3.571429px;
+}
+.ant-tabs-nav .ant-tabs-tab-active {
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 4px;
+    background: #fcc514;
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    transform: translateY(-50%);
+  }
+}
+
+.ant-modal-confirm .ant-modal-body {
+  padding: 32px 24px 24px;
+}
