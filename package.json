@@ -1,0 +1,91 @@
+{
+  "name": "gridea",
+  "version": "0.8.0",
+  "private": true,
+  "description": "A static blog writing client. You can use it to record your life, mood, knowledge, notes and ideas...",
+  "homepage": "http://hvenotes.fehey.com",
+  "license": "MIT",
+  "author": {
+    "name": "EryouHao",
+    "email": "eryouhao@gmail.com"
+  },
+  "repository": "https://github.com/getgridea/gridea",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "electron:build": "vue-cli-service electron:build",
+    "electron:serve": "vue-cli-service electron:serve",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {
+    "ant-design-vue": "^1.3.5",
+    "axios": "^0.18.0",
+    "bluebird": "^3.5.3",
+    "dayjs": "^1.7.8",
+    "ejs": "^2.6.1",
+    "electron": "^4.0.0",
+    "font-awesome": "^4.7.0",
+    "fs-extra": "^7.0.1",
+    "gray-matter": "^4.0.1",
+    "junk": "^2.1.0",
+    "less": "^3.9.0",
+    "lowdb": "^1.0.0",
+    "markdown-it": "^8.4.2",
+    "markdown-it-katex": "^2.0.3",
+    "markdown-it-toc-and-anchor": "^4.2.0",
+    "material-design-icons-iconfont": "^4.0.3",
+    "moment": "^2.24.0",
+    "shortid": "^2.2.14",
+    "simple-git": "^1.107.0",
+    "slug": "^0.9.3",
+    "transliteration": "^1.6.6",
+    "vue": "^2.5.17",
+    "vue-class-component": "^6.0.0",
+    "vue-i18n": "^8.7.0",
+    "vue-property-decorator": "^7.3.0",
+    "vue-router": "^3.0.1",
+    "vue-simplemde": "^0.5.1",
+    "vue2-transitions": "^0.2.3",
+    "vuex": "^3.0.1",
+    "vuex-class": "^0.3.1",
+    "vue-cli-plugin-electron-builder": "^1.0.0-rc.10"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.26",
+    "@types/ejs": "^2.6.3",
+    "@types/fs-extra": "^5.0.5",
+    "@types/less": "^3.0.0",
+    "@types/lowdb": "^1.0.7",
+    "@types/markdown-it": "0.0.7",
+    "@types/marked": "^0.6.5",
+    "@types/shortid": "0.0.29",
+    "@types/slug": "^0.9.1",
+    "@vue/cli-plugin-babel": "^3.6.0",
+    "@vue/cli-plugin-eslint": "^3.6.0",
+    "@vue/cli-plugin-typescript": "^3.6.0",
+    "@vue/cli-service": "^3.6.0",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "@vue/eslint-config-typescript": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "husky": "^1.3.1",
+    "less-loader": "^4.1.0",
+    "lint-staged": "^8.1.5",
+    "typescript": "^3.0.0",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "main": "background.js",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}
